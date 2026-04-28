@@ -1,0 +1,152 @@
+.logo {
+  height: 120px;
+  max-width: 200px;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--azul);
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+/* 🔥 BASE */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle, #0b1f3a, #000);
+  color: white;
+}
+
+.menu-container {
+  background: linear-gradient(180deg, #0a0f1f, #000);
+  color: #fff;
+  padding: 30px;
+  font-family: 'Poppins', sans-serif;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* 🔥 TITULOS */
+.menu-container h2 {
+  text-align: center;
+  color: gold;
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.slogan {
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.categoria {
+  margin-bottom: 40px;
+  text-align: center; /* 🔥 centra textos de sección */
+}
+
+.categoria h3 {
+  color: gold;
+  margin-bottom: 10px;
+}
+
+/* 🔥 CARD */
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid gold;
+  transition: 0.3s;
+  width: 100%;
+  max-width: 220px;
+  margin: auto; /* 🔥 centra card */
+  text-align: center; /* 🔥 centra texto dentro */
+}
+
+/* 🔥 OVERLAY */
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+/*  background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.2));*/
+}
+
+/* 🔥 HOVER */
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px gold;
+}
+
+/* 🔥 IMAGEN */
+.card img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+}
+
+/* 🔥 CONTENIDO */
+.card-content {
+  position: relative;
+  z-index: 2;
+  padding: 12px;
+  text-align: center; /* 🔥 asegura centrado */
+}
+
+.card-content h4,
+.card-content p {
+  margin: 5px 0;
+}
+
+/* 🔥 FRASE */
+.frase {
+  font-style: italic;
+  color: #bbb;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* 🔥 GRID BASE */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 220px));
+  justify-content: center;
+  gap: 15px;
+}
+
+/* 🔥 RESPONSIVE */
+@media (max-width: 768px) {
+  .menu-container {
+    padding: 20px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  .card {
+    max-width: 180px;
+  }
+
+  .menu-container h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* 🔥 2 columnas en celular */
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .menu-container {
+    padding: 15px;
+  }
+}
